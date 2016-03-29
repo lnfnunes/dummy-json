@@ -861,4 +861,22 @@ describe('helpers', function () {
       });
     });
   });
+
+  describe('media helpers', function () {
+    describe('image', function () {
+      it('should generate an placeholder image url', function () {
+        var template = [
+          '{',
+          '  "image1": "{{image \'320x240\'}}",',
+          '  "image2": "{{image \'320x240/000000/ffffff\'}}"',
+          '}'
+        ];
+        var expected = {
+          'image1': 'http://placehold.it/320x240',
+          'image2': 'http://placehold.it/320x240/000000/ffffff'
+        };
+        assertJSONOutput(template, expected);
+      });
+    });
+  });
 });
