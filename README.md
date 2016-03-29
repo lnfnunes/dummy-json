@@ -518,6 +518,20 @@ Converts the output of any string-based helper to uppercase. This uses the Handl
 {{uppercase (city)}} // BOSTON
 ```
 
+### Image
+
+`{{image 'options'}}`
+
+* `options` Any option allowed by placehold.it API (required)
+
+Generate an valid image url by placehold.it API. This uses the Handlebars'.
+
+```js
+// Generates an 320x240 image
+{{image '320x240'}} // http://placehold.it/320x240
+
+```
+
 ## Synchronized helpers
 
 Several helpers, such as name and email, are linked together in order to synchronize their values. This gives the random data some continuity. Synchronization happens automatically and doesn't require any additional work, for example:
